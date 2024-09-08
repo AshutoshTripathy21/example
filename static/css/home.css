@@ -1,14 +1,14 @@
 section#products {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .ladder-container {
     display: grid;
-    height: 1auto; /* Adjust to fit your design */
+    min-height: 800px; /* Adjust to fit your design */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Two columns */
     grid-gap: 30px; /* Space between the images */
     align-items: start; /* Align images to the start */
@@ -71,9 +71,14 @@ section#products {
 
 .side-images {
     width: 25%; 
-    height: 690px;
+    height: 800px;
     overflow: hidden;
     position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
 }
 
 .scrolling-images {
@@ -84,15 +89,21 @@ section#products {
     height: 100%;
 }
 
+.scrolling-images-wrapper:hover {
+    animation-play-state: paused; /* Pauses the animation on hover */
+}
+
 .scrolling-images-wrapper {
     display: flex;
     flex-direction: column;
-    height: auto; /* Adjusted to auto */
-    animation: scrollUp 20s linear infinite;
+    height: 100%; /* Adjusted to auto */
+    animation: scrollUp 40s linear infinite;
+    animation-play-state: running;
 }
 
 .scrolling-images-wrapper img:hover{
     transform: scale(1.05);
+    animation-play-state: paused;
 }
 
 .scrolling-images img {
@@ -114,3 +125,61 @@ section#products {
         transform: translateY(0%);
     }
 }
+
+.quote-card {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Dark background for readability */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px; /* Base font size */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: normal;
+    max-width: 90%;
+    width: 80%; /* Limit the width of the card */
+    word-wrap: break-word; /* Handle long words */
+    pointer-events: none;
+    backdrop-filter: blur(5px); 
+}
+
+.image-container:hover .quote-card {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px); /* Slight upward movement */
+}
+
+.quote-card p {
+    margin: 0; /* Remove default margin */
+    line-height: 1.2; /* Increase line spacing for better readability */
+}
+
+@media (max-width: 1024px) {
+    .quote-card {
+        font-size: 12px; /* Smaller text for tablets */
+    }
+}
+
+
+@media (max-width: 850px) {
+    .quote-card {
+        font-size: 10px; /* Smaller text for mobile devices */
+    }
+}
+
+@media (max-width: 650px) {
+    .quote-card {
+        font-size: 6px; /* Smaller text for mobile devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-card {
+        font-size: 5px; /* Even smaller text for very small screens */
+        padding: 5px 5px; /* Adjust padding if necessary */
+    }
+}
+
