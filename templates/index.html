@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecom Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="/static/css/about.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                        <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                    </svg>
+                </a>
+            </li>
+            <div class="right-section">
+                <b>
+                    <li><a href="#home">TravelliGo</a></li>
+                </b>
+
+                <li class="hideOnMobile"><a href="#products">Products</a></li>
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+                <li class="hideOnMobile"><a href="#collections">Collections</a></li>
+                <li><a href="#" class="custom-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                        </svg></a></li>
+                <li><a href="#" class="custom-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                            <path
+                                d="M200-80q-33 0-56.5-23.5T120-160v-480q0-33 23.5-56.5T200-720h80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720h80q33 0 56.5 23.5T840-640v480q0 33-23.5 56.5T760-80H200Zm0-80h560v-480H200v480Zm280-240q83 0 141.5-58.5T680-600h-80q0 50-35 85t-85 35q-50 0-85-35t-35-85h-80q0 83 58.5 141.5T480-400ZM360-720h240q0-50-35-85t-85-35q-50 0-85 35t-35 85ZM200-160v-480 480Z" />
+                        </svg>
+                        <span class="cart-badge" id="cart-count">12</span>
+                    </a>
+                </li>
+            </div>
+        </ul>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href=""><svg xmlns="http://www.w3.org/2000/svg" height="26"
+                        viewBox="0 96 960 960" width="26">
+                        <path
+                            d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+                    </svg></a></li>
+            <li><a href="#products" onclick="hideSidebar()">Products</a></li>
+            <li><a href="#about" onclick="hideSidebar()">About</a></li>
+            <li><a href="#collections" onclick="hideSidebar()">Collections</a></li>
+            <li></li>
+            <li></li>
+            <li>
+                <p class="underline-animation">Follow us</p>
+            </li>
+            <li><a href="#" class="underline-animation"><i class="fa-brands fa-facebook"
+                        style="color: #3f76d5;"></i></a> <a href="#" class="underline-animation"><i
+                        class="fa-brands fa-square-instagram" style="color: rgb(213, 116, 132);"></i></a> <a href="#"
+                    class="underline-animation"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li></li>
+        </ul>
+    </nav>
+
+    <!-- Download my resume -->
+    <!-- <div class="resume-button">
+        <a class="resume" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            chat
+        </a>
+    </div> -->
+    <!-- End -->
+
+    <!-- Sections -->
+    <section id="home">
+        <h2>Welcome to Our Store</h2>
+        <p>Explore our wide range of products.</p>
+    </section>
+
+    <section id="products">
+        <div class="ladder-container">
+            <img src="/static/images/bike1.jpg" alt="Product 1">
+            <img src="/static/images/bike2.jpg" alt="Product 2">
+            <img src="/static/images/bike3.jpg" alt="Product 3">
+            <img src="/static/images/bike4.jpg" alt="Product 4">
+            <img src="/static/images/bike1.jpg" alt="Product 5">
+            <img src="/static/images/bike5.jpg" alt="Product 6">
+            <img src="/static/images/bike6.jpg" alt="Product 7">
+        </div>
+        <div class="side-images">
+            <div class="scrolling-images">
+                <div class="scrolling-images-wrapper">
+                    <img src="/static/images/bike1.jpg" alt="Product 1">
+                    <img src="/static/images/bike2.jpg" alt="Product 2">
+                    <img src="/static/images/bike3.jpg" alt="Product 3">
+                    <img src="/static/images/bike3.jpg" alt="Product 4">
+                    <img src="/static/images/bike1.jpg" alt="Product 1">
+                    <img src="/static/images/bike2.jpg" alt="Product 2">
+                    <img src="/static/images/bike3.jpg" alt="Product 3">
+                    <img src="/static/images/bike3.jpg" alt="Product 4">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="about">
+        <div class="container">
+          <div class="slide">
+            <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+              <div class="content">
+                <div class="name">Switzerland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+              <div class="content">
+                <div class="name">Finland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
+              <div class="content">
+                <div class="name">Iceland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+              <div class="content">
+                <div class="name">Australia</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+              <div class="content">
+                <div class="name">Netherland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+              <div class="content">
+                <div class="name">Ireland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button>See More</button>
+              </div>
+            </div>
+          </div>
+          <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+    <section id="collections">
+        <h2>Collections </h2>
+        <p>Get in touch with us.</p>
+    </section>
+
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/about.js"></script>
+    <div class="overlay"></div>
+</body>
+
+</html>
